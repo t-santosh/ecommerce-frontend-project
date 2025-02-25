@@ -1,7 +1,7 @@
 import React from 'react';
 import '../assets/styles/homePage.css';
 
-const HomePage = () => {
+const LandingPage = () => {
   return (
     <div>
       <a className='sign-in'>Sign In</a>
@@ -69,4 +69,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default LandingPage;
