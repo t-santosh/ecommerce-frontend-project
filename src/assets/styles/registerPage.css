@@ -1,0 +1,41 @@
+#signin-btn {
+  position: relative;
+  top: 20px;
+  left: 40%;
+  height: 30px;
+  padding-top: 2px;
+}
+.title {
+  color: whitesmoke;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+}
+.sub-title {
+  margin-top: -10px;
+  color: #094793;
+}
+.container-fluid #brand-name a {
+  color: rgb(168, 229, 16);
+  text-decoration: none;
+}
+.container-fluid {
+  background-color: rgb(237, 229, 229);
+  display: flex;
+  justify-content: end;
+  height: 100vh;
+}
+span {
+  position: relative;
+  top: 16%;
+  left: 14%;
+  color: #094793;
+}
+.card {
+  border: none;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-right: 17%;
+  padding: 20px 40px;
+  width: 25rem;
+}
