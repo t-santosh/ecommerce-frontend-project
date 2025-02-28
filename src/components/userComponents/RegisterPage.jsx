@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { registerUser } from '../../api/userApi';
 import capitalizeFirstLetter from '../../utils/capitalizeLetters';
 import { toast, ToastContainer } from 'react-toastify';
@@ -63,13 +64,20 @@ const RegisterPage = () => {
   return (
     <div>
       <ToastContainer />
-      <div className='signIn bg-light'>
-        <a href='#'>Sign In</a>
-      </div>
-      <div className='container-fluid bg-light'>
+      <nav className='navbar navbar-expand-lg bg-body-tertiary'>
+        <div className='container-fluid'>
+          <Link className='navbar-brand ms-5' to={'/'}>
+            E-Commerce
+          </Link>
+          <Link className='nav-link me-5' to={'/login'}>
+            Login
+          </Link>
+        </div>
+      </nav>
+      <div className='custom-container container-fluid bg-light'>
         <div className='card custom-card shadow-lg'>
           <div className='card-body'>
-            <h3 className='card-title text-center'>Sign up</h3>
+            <h3 className='card-title text-center'>Register</h3>
             <br />
             <form onSubmit={handleSubmit}>
               <div className='mb-3'>
