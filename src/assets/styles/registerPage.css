@@ -1,7 +1,7 @@
 .custom-container {
   display: flex;
   justify-content: end;
-  height: 94vh;
+  height: 85vh;
 }
 .custom-card {
   border: none;
@@ -9,6 +9,7 @@
   width: 100%;
   max-width: 400px;
   margin: auto;
+  bottom: 8%;
 }
 .signIn {
   text-align: end;
