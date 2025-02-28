@@ -1,84 +1,70 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/landingPage.css';
+import Footer from './sharedComponents/Footer';
+import Header from './sharedComponents/Header';
 
 const LandingPage = () => {
   return (
     <div>
-      <nav className='navbar navbar-expand-lg bg-body-tertiary'>
-        <div className='container-fluid'>
-          <Link className='navbar-brand ms-5 me-5' href='#'>
-            E-Commerce
-          </Link>
-          <div className='collapse navbar-collapse'>
-            <ul className='navbar-nav me-auto'>
-              <li className='nav-item'>
-                <Link className='nav-link' href='#'>
-                  Home
-                </Link>
-              </li>
-              <li className='nav-item'>
-                <Link className='nav-link' href='#'>
-                  Features
-                </Link>
-              </li>
-              <li className='nav-item'>
-                <Link className='nav-link'>Products</Link>
-              </li>
-              <li className='nav-item'>
-                <Link className='nav-link'>About Us</Link>
-              </li>
-            </ul>
-            <form className='d-flex' role='search'>
-              <input
-                className='form-control me-2'
-                type='search'
-                placeholder='Search'
-                aria-label='Search'
-              />
-              <button className='btn btn-outline-success me-5' type='submit'>
-                Search
-              </button>
-            </form>
-            <div className='navbar-nav me-4'>
-              <li className='nav-item me-1'>
-                <Link className='nav-link' to={'/register'}>
-                  Register
-                </Link>
-              </li>
-              <li className='nav-item'>
-                <Link className='nav-link' to={'/login'}>
-                  Login
-                </Link>
-              </li>
-            </div>
+      <Header />
+      <div className='landing-container container'>
+        <div className='landing-container-row row'>
+          <div className='col'>
+            <header className='landing-header'>
+              <h1>Welcome to GOJO online store</h1>
+              <p>Your one-stop shop with amazing deals</p>
+            </header>
           </div>
         </div>
-      </nav>
-      <div className='container'>
-        {/* Header section */}
-        <header></header>
-        <main>
-          {/* Hero section */}
-          <section className='hero'>
-            <h1>Welcome to our E-Commerce Store</h1>
-            <p>Your one-stop shop for amazing deals</p>
-            <Link href='#shop-now' className='cta-button'>
-              Shop Now
-            </Link>
-          </section>
-          {/* Other main content */}
+        <main className='landing-main'>
           <article>
-            <h2>Featured products</h2>
-            {/* Product listings */}
+            <h4>Featured products</h4>
+            {/* Row of featured products */}
+            <div className='row'>
+              <div className='col-sm-3 mb-3 mb-sm-0'>
+                <div className='card'>
+                  <img className='card-img' src='/images/pink_bag.jpg' alt='' />
+                </div>
+              </div>
+              <div className='col-sm-3'>
+                <div className='card'>
+                  <img className='card-img' src='/images/t-shirt.jpeg' alt='' />
+                </div>
+              </div>
+              <div className='col-sm-3'>
+                <div className='card'>
+                  <img
+                    className='card-img'
+                    src='/images/pink_high_heels.jpeg'
+                    alt=''
+                  />
+                </div>
+              </div>
+              <div className='col-sm-3'>
+                <div className='card'>
+                  <img
+                    className='card-img'
+                    src='/images/makeup_kit.jpg'
+                    alt=''
+                  />
+                </div>
+              </div>
+            </div>
           </article>
+          <div className='row'>
+            <div className='col'>
+              <section className='landing-shop-now-btn'>
+                <Link className='btn btn-outline-primary' to={'/login'}>
+                  Shop Now
+                </Link>
+              </section>
+            </div>
+          </div>
           <form action='/submit' method='POST'></form>
         </main>
-        {/* Footer section */}
-        <footer>
-          <p>&copy; 2025 One-Stop-Shop. All rights reserved.</p>
-        </footer>
       </div>
+      <Footer />
     </div>
   );
 };

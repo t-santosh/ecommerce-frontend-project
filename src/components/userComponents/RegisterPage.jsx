@@ -3,8 +3,10 @@ import { Link } from 'react-router-dom';
 import { registerUser } from '../../api/userApi';
 import capitalizeFirstLetter from '../../utils/capitalizeLetters';
 import { toast, ToastContainer } from 'react-toastify';
+import global from '../../constants/global';
 import 'react-toastify/dist/ReactToastify.css';
 import '../../assets/styles/registerPage.css';
+import Footer from '../sharedComponents/Footer';
 
 const RegisterPage = () => {
   // Initialize the state formData with empty values, and set the values when received from handleChange
@@ -67,7 +69,7 @@ const RegisterPage = () => {
       <nav className='navbar navbar-expand-lg bg-body-tertiary'>
         <div className='container-fluid'>
           <Link className='navbar-brand ms-5' to={'/'}>
-            E-Commerce
+            {global.brandName}
           </Link>
           <Link className='nav-link me-5' to={'/login'}>
             Login
@@ -152,6 +154,7 @@ const RegisterPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

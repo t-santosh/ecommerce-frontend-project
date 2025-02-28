@@ -1,0 +1,29 @@
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 100vh;
+}
+.landing-header {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.landing-main {
+  margin-top: 20px;
+}
+.landing-shop-now-btn {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+.landing-footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  padding: 1rem 0;
+}
+.card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
