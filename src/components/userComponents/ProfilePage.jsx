@@ -29,7 +29,7 @@ const ProfilePage = () => {
       <div className='container mt-5 vh-100'>
         <div className='row'>
           <div className='col-lg-5'>
-            <div className='card profile-card'>
+            <div className='card shadow-lg'>
               <div className='row mt-4 mb-4'>
                 <div className='col-6'>
                   <img
