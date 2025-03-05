@@ -17,11 +17,6 @@
   display: flex;
   justify-content: center;
 }
-.landing-footer {
-  background-color: #f8f9fa;
-  text-align: center;
-  padding: 1rem 0;
-}
 .card-img {
   width: 100%;
   height: 200px;

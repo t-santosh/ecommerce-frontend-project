@@ -1,5 +1,6 @@
 import React from 'react';
 import global from '../../constants/global';
+import '../../assets/styles/footer.css';
 
 const Footer = () => {
   return (

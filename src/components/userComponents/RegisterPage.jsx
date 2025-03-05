@@ -138,17 +138,9 @@ const RegisterPage = () => {
                   placeholder='Enter password'
                 />
               </div>
-              {/* <div className='mb-3'>
-                <label className='form-label'>Confirm password</label>
-                <input
-                  type='password'
-                  className='form-control'
-                  placeholder='Enter password'
-                />
-              </div> */}
               <br />
               <button type='submit' className='btn btn-primary w-100'>
-                Register
+                Sign Up
               </button>
             </form>
           </div>
