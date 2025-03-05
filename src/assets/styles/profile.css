@@ -1,0 +1,16 @@
+.row {
+  justify-content: center;
+}
+.profile-card {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.profile-img-top {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 50%;
+}
+.user-name {
+  font-size: larger;
+}
+.user-info {
+  list-style: none;
+}

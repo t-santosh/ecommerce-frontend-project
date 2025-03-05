@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import '../assets/styles/landingPage.css';
 import Footer from './sharedComponents/Footer';
 import Header from './sharedComponents/Header';
+import global from '../constants/global';
 
 const LandingPage = () => {
   return (
@@ -12,7 +13,7 @@ const LandingPage = () => {
         <div className='landing-container-row row'>
           <div className='col'>
             <header className='landing-header'>
-              <h1>Welcome to GOJO online store</h1>
+              <h1>Welcome to {global.brandName} online store</h1>
               <p>Your one-stop shop with amazing deals</p>
             </header>
           </div>
@@ -52,7 +53,7 @@ const LandingPage = () => {
               </div>
             </div>
           </article>
-          <div className='row'>
+          <div className='row mt-5'>
             <div className='col'>
               <section className='landing-shop-now-btn'>
                 <Link className='btn btn-outline-primary' to={'/login'}>
