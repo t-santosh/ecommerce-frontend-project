@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Footer from '../sharedComponents/Footer';
 import HomeHeader from '../sharedComponents/HomeHeader';
 import { getUserProfile } from '../../api/userApi';
@@ -9,7 +8,6 @@ import { useDispatch, useSelector } from 'react-redux';
 const HomePage = () => {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.user);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchUserData = async () => {
@@ -26,7 +24,7 @@ const HomePage = () => {
   return (
     <div>
       <HomeHeader />
-      <div className='container' style={{ textAlign: 'center' }}>
+      <div className='container vh-100' style={{ textAlign: 'center' }}>
         <h1>
           Good Morning <b>{user.first_name}</b>
         </h1>
