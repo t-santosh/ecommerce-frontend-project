@@ -22,9 +22,9 @@ const Header = () => {
                   Features
                 </Link>
               </li>
-              <li className='nav-item'>
+              {/* <li className='nav-item'>
                 <Link className='nav-link'>Products</Link>
-              </li>
+              </li> */}
               <li className='nav-item'>
                 <Link className='nav-link'>About Us</Link>
               </li>

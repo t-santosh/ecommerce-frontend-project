@@ -29,7 +29,9 @@ const HomeHeader = () => {
                 </Link>
               </li>
               <li className='nav-item'>
-                <Link className='nav-link'>Products</Link>
+                <Link className='nav-link' to={'/create-product'}>
+                  Create products
+                </Link>
               </li>
               <li className='nav-item'>
                 <Link className='nav-link'>About Us</Link>
@@ -49,7 +51,7 @@ const HomeHeader = () => {
             <div className='navbar-nav'>
               <Link to='/profile'>
                 <img
-                  src='/images/pink_bag.jpg'
+                  src='/images/sample_profile_pic.jpeg'
                   alt='Profile'
                   className='rounded-circle'
                   width='30'
