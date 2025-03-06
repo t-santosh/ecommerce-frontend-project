@@ -1,10 +1,10 @@
 import React from 'react';
-import UserRoutes from './routes/UserRoutes';
+import AppRoutes from './routes/Routes';
 
 function App() {
   return (
     <div>
-      <UserRoutes />
+      <AppRoutes />
     </div>
   );
 }
