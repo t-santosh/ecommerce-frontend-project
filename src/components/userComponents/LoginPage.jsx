@@ -52,7 +52,13 @@ const LoginPage = () => {
         toast.error('Login failed! Please try again!');
       }
     } catch (error) {
-      toast.error(error.message);
+      if (error.response) {
+        toast.error(
+          error.response.data.message || 'An error occured. Please try again.'
+        );
+      } else {
+        toast.error('Internal Server Error');
+      }
     } finally {
       setLoading(false);
     }

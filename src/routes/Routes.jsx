@@ -6,6 +6,7 @@ import HomePage from '../components/userComponents/HomePage';
 import LandingPage from '../components/LandingPage';
 import ProfilePage from '../components/userComponents/ProfilePage';
 import ProductCreatePage from '../components/productComponents/ProductCreatePage';
+import ViewProducts from '../components/productComponents/ViewProducts';
 
 const AppRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const AppRoutes = () => {
 
         {/* All product-realted routes */}
         <Route path='/create-product' element={<ProductCreatePage />} />
+        <Route path='/view-products' element={<ViewProducts />} />
       </Routes>
     </BrowserRouter>
   );
