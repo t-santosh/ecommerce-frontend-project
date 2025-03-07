@@ -1,28 +1,28 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { React, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { getUserProfile } from '../../api/userApi';
-import { setUser } from '../../store/userSlice';
 import HomeHeader from '../sharedComponents/HomeHeader';
 import Footer from '../sharedComponents/Footer';
 import '../../assets/styles/profile.css';
+import { useNavigate } from 'react-router-dom';
 
 const ProfilePage = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate;
+
   const user = useSelector((state) => state.user.user);
+  const isAuthenticated = useSelector((state) => state.user.isAuthenticated);
 
   useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const data = await getUserProfile();
-        dispatch(setUser(data.user));
-      } catch (error) {
-        console.error('Error fetching user data: ', error);
-      }
-    };
-    fetchUserData();
-  }, [dispatch]);
+    if (!user || !user.id) {
+      dispatch(getUserProfile());
+    }
+  }, [dispatch, user]);
 
-  console.log('user data ', user);
+  if (!isAuthenticated) {
+    navigate('/login');
+  }
+
   return (
     <div>
       <HomeHeader />
@@ -52,6 +52,9 @@ const ProfilePage = () => {
                 </div>
                 <div className='user-info mb-4'>
                   <ul>
+                    <li>
+                      Role: <b>{user.isAdmin ? 'Admin' : 'User'}</b>
+                    </li>
                     <li>
                       Gender: <b>Male</b>
                     </li>
