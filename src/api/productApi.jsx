@@ -36,3 +36,13 @@ export const createProduct = async (productData) => {
     );
   }
 };
+
+// Fetch all products
+export const fetchAllProducts = async () => {
+  try {
+    const response = await api.get('/');
+    return response.data;
+  } catch (error) {
+    throw new Error(error.response?.data?.message || 'Failed to load products');
+  }
+};
