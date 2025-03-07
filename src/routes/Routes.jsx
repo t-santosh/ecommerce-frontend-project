@@ -7,6 +7,8 @@ import LandingPage from '../components/LandingPage';
 import ProfilePage from '../components/userComponents/ProfilePage';
 import ProductCreatePage from '../components/productComponents/ProductCreatePage';
 import ViewProducts from '../components/productComponents/ViewProducts';
+import AboutPage from '../components/AboutPage';
+import Dashboard from '../components/Dashboard';
 
 const AppRoutes = () => {
   return (
@@ -22,6 +24,12 @@ const AppRoutes = () => {
         {/* All product-realted routes */}
         <Route path='/create-product' element={<ProductCreatePage />} />
         <Route path='/view-products' element={<ViewProducts />} />
+
+        {/* About Page route */}
+        <Route path='/about' element={<AboutPage />} />
+
+        {/* Dashboard Page route */}
+        <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   );

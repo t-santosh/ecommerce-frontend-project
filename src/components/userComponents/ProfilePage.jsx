@@ -30,10 +30,10 @@ const ProfilePage = () => {
         <div className='row'>
           <div className='col-lg-5'>
             <div className='card shadow-lg'>
-              <div className='row mt-4 mb-4'>
-                <div className='col-6'>
+              <div className='row'>
+                <div className='col-4 mt-4'>
                   <img
-                    src='images/sample_profile_pic.jpeg'
+                    src='images/arush.jpeg'
                     alt='User Avatar'
                     className='profile-img-top'
                   />
