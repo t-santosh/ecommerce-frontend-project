@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:8000/api', // Backend base URL
+  // baseURL: 'http://localhost:8000/api', // Backend base URL
+  baseURL: 'http://***REMOVED***/api', // Backend base URL
   headers: {
     'Content-Type': 'application/json',
   },
@@ -56,4 +57,3 @@ export const getUserProfile = async () => {
     );
   }
 };
-

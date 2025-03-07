@@ -1,34 +1,66 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import Footer from '../sharedComponents/Footer';
 import HomeHeader from '../sharedComponents/HomeHeader';
-import { getUserProfile } from '../../api/userApi';
-import { setUser } from '../../store/userSlice';
-import { useDispatch, useSelector } from 'react-redux';
 
 const HomePage = () => {
-  const dispatch = useDispatch();
-  const user = useSelector((state) => state.user.user);
-
-  useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const data = await getUserProfile();
-        dispatch(setUser(data.user));
-      } catch (error) {
-        console.error('Error fetching user data: ', error);
-      }
-    };
-    fetchUserData();
-  }, [dispatch]);
+  const data = [
+    {
+      name: 'Graphs',
+      subtitle: 'Check out all the analytics in graphs',
+      img: 'images/t-shirt.jpeg',
+    },
+    {
+      name: 'Sales',
+      subtitle: 'Find out how much sales is done',
+      img: 'images/makeup_kit.jpg',
+    },
+    {
+      name: 'Subscriber',
+      subtitle: 'This is your total subscriber 500',
+      img: 'images/pink_bag.jpg',
+    },
+    {
+      name: 'Badge',
+      subtitle: 'Number of badges users earned',
+      img: 'images/pink_high_heels.jpeg',
+    },
+    {
+      name: 'Graphs',
+      subtitle: 'Check out all the analytics in graphs',
+      img: 'images/sample_profile_pic.jpeg',
+    },
+    {
+      name: 'Sales',
+      subtitle: 'Find out how much sales is done',
+      img: 'images/sample.jpg',
+    },
+    {
+      name: 'Subscriber',
+      subtitle: 'This is your total subscriber 500',
+      img: 'images/t-shirt.jpeg',
+    },
+    {
+      name: 'Badge',
+      subtitle: 'Number of badges users earned',
+      img: 'images/makeup_kit.jpg',
+    },
+  ];
 
   return (
     <div>
       <HomeHeader />
-      <div className='container vh-100' style={{ textAlign: 'center' }}>
-        <h1>
-          Good Morning <b>{user.first_name}</b>
-        </h1>
-        <h4>Welcome to {global.brandName} home page</h4>
+      <div className='container vh-100'>
+        <div className='row mt-5'>
+          {data.map((data) => (
+            <div className='col-3'>
+              <div key={data.name}>
+                <div className='card' style={{ width: '18rem' }}>
+                  <img src={data.img} class='card-img-top' alt='#' />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
       <Footer />
     </div>
