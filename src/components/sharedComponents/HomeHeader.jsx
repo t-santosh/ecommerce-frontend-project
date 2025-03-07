@@ -13,19 +13,19 @@ const HomeHeader = () => {
     <div>
       <nav className='navbar navbar-expand-lg bg-body-tertiary'>
         <div className='container-fluid'>
-          <Link className='navbar-brand ms-5 me-5' href='#'>
+          <Link className='navbar-brand ms-5 me-5' to={'/home'}>
             {global.brandName}
           </Link>
           <div className='collapse navbar-collapse'>
             <ul className='navbar-nav me-auto'>
               <li className='nav-item'>
-                <Link className='nav-link' to={'/home'}>
-                  Home
+                <Link className='nav-link' to={'/dashboard'}>
+                  Dashboard
                 </Link>
               </li>
               <li className='nav-item'>
-                <Link className='nav-link' href='#'>
-                  Features
+                <Link className='nav-link' to={'/home'}>
+                  Home
                 </Link>
               </li>
               <li className='nav-item dropdown'>
@@ -51,7 +51,9 @@ const HomeHeader = () => {
                 </ul>
               </li>
               <li className='nav-item'>
-                <Link className='nav-link'>About Us</Link>
+                <Link className='nav-link' to={'/about'}>
+                  About Us
+                </Link>
               </li>
             </ul>
             <form className='d-flex' role='search'>
@@ -68,7 +70,7 @@ const HomeHeader = () => {
             <div className='navbar-nav dropdown'>
               <Link to='/profile'>
                 <img
-                  src='/images/sample_profile_pic.jpeg'
+                  src='/images/arush.jpeg'
                   alt='Profile'
                   className='rounded-circle'
                   width='30'
