@@ -5,8 +5,11 @@ import { ToastContainer, toast } from 'react-toastify';
 import Footer from '../sharedComponents/Footer';
 import { Link, useNavigate } from 'react-router-dom';
 import global from '../../constants/global';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../store/userSlice';
 
 const LoginPage = () => {
+  const dispatch = useDispatch();
   // Initialize the state formData with empty values, and set the values when received from handleChange
   const [formData, setFormData] = useState({
     email: '',
@@ -43,6 +46,9 @@ const LoginPage = () => {
       if (data && data.token) {
         // Store token in localStorage or cookies
         localStorage.setItem('token', data.token);
+
+        // Store user data in Redux store
+        dispatch(setUser(data.user));
 
         // Check if message exists in the response
         // Show the success message fetched from API
