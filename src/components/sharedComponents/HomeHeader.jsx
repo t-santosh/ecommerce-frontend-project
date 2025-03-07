@@ -28,10 +28,27 @@ const HomeHeader = () => {
                   Features
                 </Link>
               </li>
-              <li className='nav-item'>
-                <Link className='nav-link' to={'/create-product'}>
-                  Create products
+              <li className='nav-item dropdown'>
+                <Link
+                  className='nav-link'
+                  to='#'
+                  role='button'
+                  data-bs-toggle='dropdown'
+                  aria-expanded='false'>
+                  Products
                 </Link>
+                <ul className='dropdown-menu border rounded shadow'>
+                  <li>
+                    <Link className='dropdown-item' to={'/create-product'}>
+                      Insert Product
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className='dropdown-item' to={'/view-products'}>
+                      View Products
+                    </Link>
+                  </li>
+                </ul>
               </li>
               <li className='nav-item'>
                 <Link className='nav-link'>About Us</Link>
@@ -48,7 +65,7 @@ const HomeHeader = () => {
                 Search
               </button>
             </form>
-            <div className='navbar-nav'>
+            <div className='navbar-nav dropdown'>
               <Link to='/profile'>
                 <img
                   src='/images/sample_profile_pic.jpeg'
