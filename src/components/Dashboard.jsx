@@ -1,6 +1,6 @@
 import React from 'react';
-import HomeHeader from './sharedComponents/HomeHeader';
 import Footer from './sharedComponents/Footer';
+import Header from './sharedComponents/Header';
 
 const Dashboard = () => {
   const data = [
@@ -27,7 +27,7 @@ const Dashboard = () => {
   ];
   return (
     <div>
-      <HomeHeader />
+      <Header />
       <div className='container vh-100'>
         <h3 className='mt-4'>Dashboard</h3>
         <div className='row mt-5'>
