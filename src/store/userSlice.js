@@ -18,9 +18,10 @@ const userSlice = createSlice({
       state.token = action.payload.token;
     },
     logoutUser: (state) => {
-      state.user = {}; // Remove user data
+      state.user = null; // Remove user data
       state.isAuthenticated = false; // User is logged out
       state.token = null;
+      localStorage.removeItem('token');
     },
   },
 });
