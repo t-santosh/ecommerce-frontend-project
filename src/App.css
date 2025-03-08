@@ -1,0 +1,64 @@
+/* Global Variables */
+:root {
+  --primary-color: #223b55;
+  --secondary-color: #102a46;
+  --accent-color: #e67e22; /* Bright Orange */
+  --neutral-color: #ecf0f1; /* Light Gray */
+  --text-color: #34495e; /* Dark Gray */
+  --alert-error-color: #e74c3c; /* Error Red */
+  --alert-success-color: #2ecc71; /* Success Green */
+}
+/* Topbar css*/
+.top-bar {
+  background-color: var(--primary-color);
+}
+.top-bar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+
+/* Navbar css */
+.navbar {
+  background-color: var(--secondary-color);
+  color: white;
+}
+.navbar a {
+  color: white;
+  font-weight: bold;
+}
+.navbar a:hover {
+  color: var(--accent-color);
+}
+
+/* Buttons css*/
+.btn-primary {
+  background-color: (var(--primary-color));
+  color: white;
+}
+.btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Footer css */
+.footer {
+  background-color: var(--secondary-color);
+  text-align: center;
+  color: white;
+  padding: 1rem;
+}
+
+/* Product dropdown css*/
+.navbar-nav .navbar-dropdown-menu .dropdown-item {
+  font-weight: normal;
+}
+
+/* Profile image dropdown css*/
+.navbar-nav .dropdown-menu .dropdown-item {
+  font-size: none;
+  color: black;
+}
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+  background-color: var(--primary-color);
+  color: white;
+}

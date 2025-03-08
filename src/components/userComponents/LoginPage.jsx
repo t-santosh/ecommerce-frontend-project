@@ -72,7 +72,7 @@ const LoginPage = () => {
   return (
     <div>
       <ToastContainer />
-      <nav className='navbar navbar-expand-lg bg-body-tertiary'>
+      <nav className='navbar navbar-expand-lg'>
         <div className='container-fluid'>
           <Link className='navbar-brand ms-5' to={'/'}>
             {global.brandName}

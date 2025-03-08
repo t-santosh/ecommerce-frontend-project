@@ -66,7 +66,7 @@ const RegisterPage = () => {
   return (
     <div>
       <ToastContainer />
-      <nav className='navbar navbar-expand-lg bg-body-tertiary'>
+      <nav className='navbar navbar-expand-lg'>
         <div className='container-fluid'>
           <Link className='navbar-brand ms-5' to={'/'}>
             {global.brandName}
@@ -76,7 +76,7 @@ const RegisterPage = () => {
           </Link>
         </div>
       </nav>
-      <div className='custom-container container-fluid bg-light'>
+      <div className='custom-container container-fluid bg-light mt-5'>
         <div className='card custom-card shadow-lg'>
           <div className='card-body'>
             <h3 className='card-title text-center'>Register</h3>

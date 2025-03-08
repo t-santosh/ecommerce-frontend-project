@@ -1,11 +1,11 @@
 import React from 'react';
-import HomeHeader from '../components/sharedComponents/HomeHeader';
 import Footer from '../components/sharedComponents/Footer';
+import Header from './sharedComponents/Header';
 
 const AboutPage = () => {
   return (
     <div>
-      <HomeHeader />
+      <Header />
       <div className='container vh-100'>
         <h3>About Us</h3>
         <p>
