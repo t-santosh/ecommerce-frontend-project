@@ -2,13 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/landingPage.css';
 import Footer from './sharedComponents/Footer';
-import Header from './sharedComponents/Header';
+import NavBar from './sharedComponents/NavBar';
 import global from '../constants/global';
+import TopBar from './sharedComponents/TopBar';
 
 const LandingPage = () => {
   return (
     <div>
-      <Header />
+      <TopBar />
+      <NavBar />
       <div className='landing-container container'>
         <div className='landing-container-row row'>
           <div className='col'>
@@ -56,7 +58,7 @@ const LandingPage = () => {
           <div className='row mt-5'>
             <div className='col'>
               <section className='landing-shop-now-btn'>
-                <Link className='btn btn-outline-primary' to={'/login'}>
+                <Link className='btn btn-primary' to={'/login'}>
                   Shop Now
                 </Link>
               </section>

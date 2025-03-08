@@ -1,6 +1,6 @@
 import React from 'react';
 import Footer from '../sharedComponents/Footer';
-import HomeHeader from '../sharedComponents/HomeHeader';
+import Header from '../sharedComponents/Header';
 
 const HomePage = () => {
   const data = [
@@ -56,7 +56,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <HomeHeader />
+      <Header />
       <div className='container vh-100'>
         <div className='row mt-5'>
           {data.map((data) => (
