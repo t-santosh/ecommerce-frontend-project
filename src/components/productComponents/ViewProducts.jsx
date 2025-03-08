@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { fetchAllProducts } from '../../api/productApi';
-import HomeHeader from '../sharedComponents/HomeHeader';
 import Footer from '../sharedComponents/Footer';
+import Header from '../sharedComponents/Header';
 
 const ViewProducts = () => {
   const [products, setProducts] = useState([]);
@@ -26,7 +26,7 @@ const ViewProducts = () => {
   }, []);
   return (
     <div>
-      <HomeHeader />
+      <Header />
       <div className='container mt-4 vh-100'>
         <h2>Product List</h2>
         <table className='table table-bordered table-striped'>
