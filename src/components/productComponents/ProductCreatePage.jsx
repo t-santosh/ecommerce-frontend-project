@@ -3,7 +3,7 @@ import capitalizeFirstLetter from '../../utils/capitalizeLetters';
 import { toast, ToastContainer } from 'react-toastify';
 import { createProduct } from '../../api/productApi';
 import Footer from '../sharedComponents/Footer';
-import HomeHeader from '../sharedComponents/HomeHeader';
+import Header from '../sharedComponents/Header';
 
 const ProductCreatePage = () => {
   const [name, setName] = useState('');
@@ -43,25 +43,25 @@ const ProductCreatePage = () => {
   return (
     <div>
       <ToastContainer />
-      <HomeHeader />
+      <Header />
       <div className='container vh-100 d-flex justify-content-center align-items-center'>
         <div className='card shadow-lg' style={{ width: '60rem' }}>
-          <h1 className='card-title text-center mt-4'>Create Product</h1>
+          <h1 className='card-title text-center mt-3'>Create Product</h1>
           <div className='card-body'>
             <form onSubmit={handleSubmit}>
-              <div className='mb-3'>
+              <div>
                 <label className='form-label'>Name:</label>
                 <input
                   type='text'
-                  className='form-control'
+                  className='form-control mb-2'
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
               </div>
-              <div className='mb-3'>
+              <div>
                 <label className='form-label'>Description:</label>
                 <textarea
-                  className='form-control'
+                  className='form-control mb-2'
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                 />

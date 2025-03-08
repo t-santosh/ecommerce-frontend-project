@@ -1,17 +1,14 @@
 import { React, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getUserProfile } from '../../api/userApi';
-import HomeHeader from '../sharedComponents/HomeHeader';
+import Header from '../sharedComponents/Header';
 import Footer from '../sharedComponents/Footer';
 import '../../assets/styles/profile.css';
-import { useNavigate } from 'react-router-dom';
 
 const ProfilePage = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate;
 
   const user = useSelector((state) => state.user.user);
-  const isAuthenticated = useSelector((state) => state.user.isAuthenticated);
 
   useEffect(() => {
     if (!user || !user.id) {
@@ -19,13 +16,9 @@ const ProfilePage = () => {
     }
   }, [dispatch, user]);
 
-  if (!isAuthenticated) {
-    navigate('/login');
-  }
-
   return (
     <div>
-      <HomeHeader />
+      <Header />
       <div className='container mt-5 vh-100'>
         <div className='row'>
           <div className='col-lg-5'>
