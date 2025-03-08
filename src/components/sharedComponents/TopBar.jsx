@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import global from '../../constants/global';
 import { useSelector, useDispatch } from 'react-redux';
@@ -13,8 +13,13 @@ const TopBar = () => {
   const handleLogout = () => {
     localStorage.removeItem('token');
     dispatch(logoutUser());
-    navigate('/');
   };
+
+  useEffect(() => {
+    if (!isAuthenticated) {
+      navigate('/');
+    }
+  }, [isAuthenticated, navigate]);
   return (
     <div className='top-bar d-flex justify-content-between align-items-center p-2'>
       <Link className='brand-name fw-fold fs-5 p-2' to={'#'}>
@@ -78,7 +83,6 @@ const TopBar = () => {
             </li>
           </>
         )}
-        ;
       </div>
     </div>
   );
