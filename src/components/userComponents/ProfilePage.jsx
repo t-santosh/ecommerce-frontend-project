@@ -4,18 +4,25 @@ import { getUserProfile } from '../../api/userApi';
 import Header from '../sharedComponents/Header';
 import Footer from '../sharedComponents/Footer';
 import '../../assets/styles/profile.css';
+import { useNavigate } from 'react-router-dom';
 
 const ProfilePage = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const user = useSelector((state) => state.user.user);
 
   useEffect(() => {
-    if (!user || !user.id) {
+    if (!user) {
+      navigate('/');
+    } else if (!user.id) {
       dispatch(getUserProfile());
     }
-  }, [dispatch, user]);
+  }, [dispatch, user, navigate]);
 
+  if (!user) {
+    return <navigate to={'/'} />;
+  }
   return (
     <div>
       <Header />
