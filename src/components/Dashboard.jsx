@@ -5,22 +5,22 @@ import Header from './sharedComponents/Header';
 const Dashboard = () => {
   const data = [
     {
-      id: '1',
+      id: 1,
       name: 'Graphs',
       subtitle: 'Check out all the analytics in graphs',
     },
     {
-      id: '2',
+      id: 2,
       name: 'Sales',
       subtitle: 'Find out how much sales is done',
     },
     {
-      id: '3',
+      id: 3,
       name: 'Subscriber',
       subtitle: 'This is your total subscriber 500',
     },
     {
-      id: '4',
+      id: 4,
       name: 'Badge',
       subtitle: 'Number of badges users earned',
     },
@@ -28,16 +28,15 @@ const Dashboard = () => {
   return (
     <div>
       <Header />
-      <div className='container vh-100'>
-        <h3 className='mt-4'>Dashboard</h3>
-        <div className='row mt-5'>
+      <div className='container'>
+        <div className='row'>
           {data.map((data) => (
             <div className='col-3'>
               <div key={data.id}>
-                <div className='card' style={{ width: '18rem' }}>
+                <div className='card card-dashboard' style={{ width: '18rem' }}>
                   <div className='card-body'>
                     <h4>{data.name}</h4>
-                    <div className='card-title'>{data.subtitle}</div>
+                    <div className='card-text'>{data.subtitle}</div>
                   </div>
                 </div>
               </div>

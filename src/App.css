@@ -1,64 +1,180 @@
+/* ============================= */
+/*          GLOBAL STYLES        */
+/* ============================= */
+
 /* Global Variables */
 :root {
-  --primary-color: #223b55;
-  --secondary-color: #102a46;
-  --accent-color: #e67e22; /* Bright Orange */
-  --neutral-color: #ecf0f1; /* Light Gray */
-  --text-color: #34495e; /* Dark Gray */
-  --alert-error-color: #e74c3c; /* Error Red */
-  --alert-success-color: #2ecc71; /* Success Green */
+  --PRIMARY-COLOR: #223b55;
+  --SECONDARY-COLOR: #102a46;
+  --ACCENT-COLOR: #e67e22; /* Bright Orange */
+  --NEUTRAL-COLOR: #ecf0f1; /* Light Gray */
+  --TEXT-COLOR: #34495e; /* Dark Gray */
+  --ALERT-ERROR-COLOR: #e74c3c; /* Error Red */
+  --ALERT-SUCCESS-COLOR: #2ecc71; /* Success Green */
 }
-/* Topbar css*/
+
+/* ============================= */
+/*          GENERAL STYLES       */
+/* ============================= */
+
+body {
+  background-color: var(--NEUTRAL-COLOR) !important;
+  color: var(--TEXT-COLOR);
+  font-family: Arial, sans-serif;
+}
+
+/* ============================= */
+/*            HEADER             */
+/* ============================= */
+
+/* Topbar Styles */
 .top-bar {
-  background-color: var(--primary-color);
+  background-color: var(--PRIMARY-COLOR);
+  position: fixed;
+  z-index: 1;
 }
+
 .top-bar a {
   text-decoration: none;
-  color: white;
+  color: var(--NEUTRAL-COLOR);
   font-weight: 400;
 }
 
-/* Navbar css */
+/* Navbar Styles */
 .navbar {
-  background-color: var(--secondary-color);
-  color: white;
+  background-color: var(--SECONDARY-COLOR);
+  color: var(--NEUTRAL-COLOR);
+  top: 60px;
 }
+
+.navbar-login,
+.navbar-register {
+  top: 0;
+}
+
 .navbar a {
-  color: white;
+  color: var(--NEUTRAL-COLOR);
   font-weight: bold;
 }
+
 .navbar a:hover {
-  color: var(--accent-color);
+  color: var(--ACCENT-COLOR);
 }
 
-/* Buttons css*/
+/* ============================= */
+/*           BUTTONS             */
+/* ============================= */
+
 .btn-primary {
-  background-color: (var(--primary-color));
-  color: white;
-}
-.btn:hover {
-  background-color: var(--secondary-color);
+  background-color: var(--PRIMARY-COLOR);
+  color: var(--NEUTRAL-COLOR);
 }
 
-/* Footer css */
-.footer {
-  background-color: var(--secondary-color);
-  text-align: center;
-  color: white;
-  padding: 1rem;
+.btn-primary:hover {
+  background-color: var(--SECONDARY-COLOR);
 }
 
-/* Product dropdown css*/
+/* ============================= */
+/*        DROPDOWN MENUS         */
+/* ============================= */
+
+/* Product Dropdown */
 .navbar-nav .navbar-dropdown-menu .dropdown-item {
   font-weight: normal;
 }
 
-/* Profile image dropdown css*/
+/* Profile Image Dropdown */
 .navbar-nav .dropdown-menu .dropdown-item {
-  font-size: none;
+  font-size: 14px;
   color: black;
 }
+
 .navbar-nav .dropdown-menu .dropdown-item:hover {
-  background-color: var(--primary-color);
-  color: white;
+  background-color: var(--PRIMARY-COLOR);
+  color: var(--NEUTRAL-COLOR);
+}
+
+/* ============================= */
+/*         HERO SECTION          */
+/* ============================= */
+
+.hero-section {
+  background-image: url('/public/images/pink_high_heels.jpeg');
+  width: 100vw;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 5px 5px lightgray;
+  text-align: center;
+  margin-top: 60px;
+}
+
+/* Offset for main container */
+
+.container {
+  margin-top: 100px;
+  margin-bottom: 40px;
+}
+
+/* ============================= */
+/*         Dashboard             */
+/* ============================= */
+
+.container .card-dashboard {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.container .card-dashboard:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ============================= */
+/*        Product Card           */
+/* ============================= */
+
+.product-card {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styles */
+.product-img {
+  width: 100%;
+  height: 200px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensures image fits properly */
+  border-bottom: 1px solid lightgray;
+}
+
+/* Button styles */
+.product-card .btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* ============================= */
+/*           FOOTER              */
+/* ============================= */
+
+.footer {
+  background-color: var(--SECONDARY-COLOR);
+  text-align: center;
+  color: var(--NEUTRAL-COLOR);
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
 }

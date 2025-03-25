@@ -72,7 +72,7 @@ const LoginPage = () => {
   return (
     <div>
       <ToastContainer />
-      <nav className='navbar navbar-expand-lg'>
+      <nav className='navbar navbar-login navbar-expand-lg'>
         <div className='container-fluid'>
           <Link className='navbar-brand ms-5' to={'/'}>
             {global.brandName}
@@ -82,7 +82,7 @@ const LoginPage = () => {
           </Link>
         </div>
       </nav>
-      <div className='custom-container container-fluid bg-light'>
+      <div className='custom-container container'>
         <div className='card custom-card shadow-lg'>
           <div className='card-body'>
             <h3 className='card-title text-center'>Login</h3>

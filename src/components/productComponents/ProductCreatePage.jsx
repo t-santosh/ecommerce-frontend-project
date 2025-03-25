@@ -44,8 +44,8 @@ const ProductCreatePage = () => {
     <div>
       <ToastContainer />
       <Header />
-      <div className='container vh-100 d-flex justify-content-center align-items-center'>
-        <div className='card shadow-lg' style={{ width: '60rem' }}>
+      <div className='container'>
+        <div className='card shadow-lg'>
           <h1 className='card-title text-center mt-3'>Create Product</h1>
           <div className='card-body'>
             <form onSubmit={handleSubmit}>

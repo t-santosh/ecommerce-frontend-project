@@ -1,6 +1,6 @@
 .custom-container {
   display: flex;
-  justify-content: end;
+  /* justify-content: end; */
   height: 85vh;
 }
 .custom-card {

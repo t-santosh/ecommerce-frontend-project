@@ -27,7 +27,7 @@ const ViewProducts = () => {
   return (
     <div>
       <Header />
-      <div className='container mt-4 vh-100'>
+      <div className='container'>
         <h2>Product List</h2>
         <table className='table table-bordered table-striped'>
           <thead className='table-dark'>

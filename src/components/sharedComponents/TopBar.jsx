@@ -21,7 +21,7 @@ const TopBar = () => {
     }
   }, [isAuthenticated, navigate]);
   return (
-    <div className='top-bar d-flex justify-content-between align-items-center p-2'>
+    <div className='container-fluid top-bar d-flex justify-content-between align-items-center p-2'>
       <Link className='brand-name fw-fold fs-5 p-2' to={'#'}>
         {global.brandName}
       </Link>

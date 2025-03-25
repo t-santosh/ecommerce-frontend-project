@@ -26,8 +26,8 @@ const ProfilePage = () => {
   return (
     <div>
       <Header />
-      <div className='container mt-5 vh-100'>
-        <div className='row'>
+      <div className='container'>
+        <div className='row row-profile'>
           <div className='col-lg-5'>
             <div className='card shadow-lg'>
               <div className='row'>

@@ -9,6 +9,7 @@ import ProductCreatePage from '../components/productComponents/ProductCreatePage
 import ViewProducts from '../components/productComponents/ViewProducts';
 import AboutPage from '../components/AboutPage';
 import Dashboard from '../components/Dashboard';
+import CartPage from '../components/orderComponents/CartPage';
 
 const AppRoutes = () => {
   return (
@@ -30,6 +31,9 @@ const AppRoutes = () => {
 
         {/* Dashboard Page route */}
         <Route path='/dashboard' element={<Dashboard />} />
+
+        {/* Cart Page route */}
+        <Route path='/cart' element={<CartPage />} />
       </Routes>
     </BrowserRouter>
   );
