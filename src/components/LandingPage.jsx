@@ -4,7 +4,7 @@ import Footer from './sharedComponents/Footer';
 import Header from './sharedComponents/Header';
 // import global from '../constants/global';
 import HeroSection from './sharedComponents/HeroSection';
-import ProductCard from './sharedComponents/ProductCard';
+import ProductList from './userComponents/ProductList';
 
 const LandingPage = () => {
   return (
@@ -12,10 +12,7 @@ const LandingPage = () => {
       <Header />
       <HeroSection />
       <div className='container-fluid'>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <ProductList />
         <div className='row mt-5 mb-5'>
           <div className='col d-flex justify-content-center'>
             <Link className='btn btn-primary' to={'/login'}>

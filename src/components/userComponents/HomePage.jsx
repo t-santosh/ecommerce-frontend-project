@@ -4,7 +4,7 @@ import Header from '../sharedComponents/Header';
 import HeroSection from '../sharedComponents/HeroSection';
 import { useSelector } from 'react-redux';
 import Dashboard from '../Dashboard';
-import ProductCard from '../sharedComponents/ProductCard';
+import ProductList from './ProductList';
 
 const HomePage = () => {
   const user = useSelector((state) => state.user.user);
@@ -17,11 +17,8 @@ const HomePage = () => {
     <div>
       <Header />
       <HeroSection />
-      <div className='container'>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+      <div className='container-fluid'>
+        <ProductList />
       </div>
       <Footer />
     </div>

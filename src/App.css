@@ -141,10 +141,30 @@ body {
 /* ============================= */
 
 .product-card {
+  display: flex;
   border: 1px solid lightgray;
   border-radius: 10px;
-  overflow: hidden;
   transition: transform 0.2s ease-in-out;
+  margin-bottom: 50px;
+}
+
+.product-card .card-body {
+  height: 150px;
+  overflow: hidden;
+}
+
+.product-card .card-description {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limits to 3 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 3rem;
+  line-clamp: 2; /* Standard property */
+}
+
+.product-card .card-price {
+  margin-top: auto;
 }
 
 .product-card:hover {
@@ -162,9 +182,38 @@ body {
 
 /* Button styles */
 .product-card .btn {
-  width: 100%;
-  margin-top: 10px;
+  margin: 0 auto 10px;
+  position: relative;
+  bottom: 0;
 }
+
+/* ============================= */
+/*         CartIcon              */
+/* ============================= */
+
+.cart-icon-container {
+  position: relative;
+  font-size: 25px; 
+  margin-right: 20px;
+  padding-top: 5px;
+}
+
+.cart-item-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 /* ============================= */
 /*           FOOTER              */
