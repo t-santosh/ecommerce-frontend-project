@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import global from '../../constants/global';
 import { useSelector, useDispatch } from 'react-redux';
 import { logoutUser } from '../../store/userSlice';
+import CartIcon from '../userComponents/CartIcon';
 
 const TopBar = () => {
   const navigate = useNavigate();
@@ -47,9 +48,7 @@ const TopBar = () => {
         ) : (
           <>
             <li className='navbar-nav nav-item'>
-              <Link className='nav-link cart me-4' to={'/cart'}>
-                🛒 Cart
-              </Link>
+              <CartIcon />
             </li>
             <li className='navbar-nav nav-item dropdown'>
               <Link
