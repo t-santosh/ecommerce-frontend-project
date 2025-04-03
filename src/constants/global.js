@@ -1,5 +1,5 @@
 const global = {
-  brandName: 'ShopOnline',
+  brandName: 'BigMart',
   year: new Date().getFullYear(),
 };
 

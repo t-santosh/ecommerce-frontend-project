@@ -29,12 +29,13 @@ const ViewProducts = () => {
       <Header />
       <div className='container'>
         <h2>Product List</h2>
-        <table className='table table-bordered table-striped'>
+        <table className='table table-bordered table-striped mt-5'>
           <thead className='table-dark'>
             <tr>
               <th>ID</th>
               <th>Name</th>
               <th>Description</th>
+              <th>Image</th>
               <th>Price ($)</th>
             </tr>
           </thead>
@@ -45,6 +46,17 @@ const ViewProducts = () => {
                   <td>{product.id}</td>
                   <td>{product.name}</td>
                   <td>{product.description}</td>
+                  <td>
+                    <img
+                      src={
+                        product.image
+                          ? `http://localhost:8000/uploads/${product.image}`
+                          : '/images/t-shirt.jpeg'
+                      }
+                      alt='images'
+                      height='100px'
+                    />
+                  </td>
                   <td>{product.price}</td>
                 </tr>
               ))

@@ -17,7 +17,7 @@ const ProductList = () => {
   return (
     <div className='row justify-content-start mt-5'>
       {products.map((product) => (
-        <div key={product.id} className='col-md-2'>
+        <div key={product.id} className='col-md-3'>
           <ProductCard product={product} />
         </div>
       ))}

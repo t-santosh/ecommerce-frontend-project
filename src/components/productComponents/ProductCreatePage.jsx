@@ -9,6 +9,12 @@ const ProductCreatePage = () => {
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  // Handle file selection
+  const handleFileChange = (e) => {
+    setSelectedImage(e.target.files[0]);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,8 +32,17 @@ const ProductCreatePage = () => {
       return;
     }
 
+    // Prepare FormData for file upload
+    const formData = new FormData();
+    formData.append('name', trimmedData.name);
+    formData.append('description', trimmedData.description);
+    formData.append('price', trimmedData.price);
+    if (selectedImage) {
+      formData.append('image', selectedImage); // Append image to FormData
+    }
+
     try {
-      const data = await createProduct(trimmedData);
+      const data = await createProduct(formData);
       if (data && data.message) {
         toast.success(data.message);
       } else {
@@ -48,7 +63,7 @@ const ProductCreatePage = () => {
         <div className='card shadow-lg'>
           <h1 className='card-title text-center mt-3'>Create Product</h1>
           <div className='card-body'>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} encType='multipart/form-data'>
               <div>
                 <label className='form-label'>Name:</label>
                 <input
@@ -75,8 +90,20 @@ const ProductCreatePage = () => {
                   onChange={(e) => setPrice(e.target.value)}
                 />
               </div>
+              <div class='mb-3'>
+                <label for='formFile' className='form-label'>
+                  Image:
+                </label>
+                <input
+                  className='form-control'
+                  type='file'
+                  id='formFile'
+                  accept='image/*'
+                  onChange={handleFileChange}
+                />
+              </div>
               <button type='submit' className='btn btn-primary mt-4'>
-                Create Product
+                Submit
               </button>
             </form>
           </div>

@@ -60,32 +60,7 @@ const NavBar = () => {
             </li>
             <li className='nav-item'>
               <Link className='nav-link' to={'#'}>
-                Best Sellers
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link className='nav-link' to={'#'}>
                 Categories
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link className='nav-link' to={'#'}>
-                Deals
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link className='nav-link' to={'#'}>
-                Toys
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link className='nav-link' to={'#'}>
-                Computers
-              </Link>
-            </li>
-            <li className='nav-item'>
-              <Link className='nav-link' to={'#'}>
-                Clothings
               </Link>
             </li>
             <li className='nav-item'>
