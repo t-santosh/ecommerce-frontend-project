@@ -27,7 +27,11 @@ api.interceptors.request.use(
 // Create a product
 export const createProduct = async (productData) => {
   try {
-    const response = await api.post('/', productData);
+    const response = await api.post('/', productData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    });
     console.log(response.status);
     return response.data;
   } catch (error) {

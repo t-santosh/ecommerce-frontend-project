@@ -17,13 +17,13 @@ const TopBar = () => {
   };
 
   useEffect(() => {
-    if (!isAuthenticated) {
+    if (!isAuthenticated && window.location.pathname !== '/cart') {
       navigate('/');
     }
   }, [isAuthenticated, navigate]);
   return (
     <div className='container-fluid top-bar d-flex justify-content-between align-items-center p-2'>
-      <Link className='brand-name fw-fold fs-5 p-2' to={'#'}>
+      <Link className='brand-name fw-fold fs-5 p-2' to={'/'}>
         {global.brandName}
       </Link>
       <div className='d-flex flex-grow-1 mx-5' role='search'>
@@ -36,20 +36,26 @@ const TopBar = () => {
         <button className='btn btn-outline-success ms-2'>Search</button>
       </div>
       <div className='d-flex me-3'>
+        <li className='navbar-nav nav-item'>
+          <Link to={'/cart'}>
+            <CartIcon />
+          </Link>
+        </li>
         {!isAuthenticated ? (
           <>
-            <Link className='me-3' to={'/register'}>
-              Register
-            </Link>
-            <Link className='me-3' to={'/login'}>
-              Login
-            </Link>
+            <li className='navbar-nav nav-item'>
+              <Link className='me-3' to={'/register'}>
+                Register
+              </Link>
+            </li>
+            <li className='navbar-nav nav-item'>
+              <Link className='me-3' to={'/login'}>
+                Login
+              </Link>
+            </li>
           </>
         ) : (
           <>
-            <li className='navbar-nav nav-item'>
-              <CartIcon />
-            </li>
             <li className='navbar-nav nav-item dropdown'>
               <Link
                 className='nav-link'
@@ -57,11 +63,11 @@ const TopBar = () => {
                 data-bs-toggle='dropdown'
                 aria-expanded='false'>
                 <img
-                  src='/images/arush.jpeg'
+                  src='/images/sample_profile_pic.jpeg'
                   alt='Profile'
-                  className='rounded-circle'
-                  width='30'
-                  height='30'
+                  className='rounded-circle profile-img'
+                  width='35'
+                  height='35'
                 />
               </Link>
               <ul

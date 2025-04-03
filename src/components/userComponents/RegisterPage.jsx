@@ -5,7 +5,7 @@ import capitalizeFirstLetter from '../../utils/capitalizeLetters';
 import { toast, ToastContainer } from 'react-toastify';
 import global from '../../constants/global';
 import 'react-toastify/dist/ReactToastify.css';
-import '../../assets/styles/registerPage.css';
+// import '../../assets/styles/registerPage.css';
 import Footer from '../sharedComponents/Footer';
 
 const RegisterPage = () => {
